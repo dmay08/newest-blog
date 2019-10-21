@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<h1>All Blog Posts</h1>
+
+<a href="/blogPosts/new">New</a>
+    <h1>Blog Posts</h1>
+    <% for (key in blogPosts) {%>
+        <hr>
+        <h3><%= blogPosts[key].name %></h3>
+        <h4><%= blogPosts[key].protein %></h4>
+        <p><%= blogPosts[key].garnish %></p>
+        <a href='/blogPosts/<%= key %>'><button>Show</button></a>
+        <br>
+        <br>
+        <a href='/blogPosts/<%= key %>/edit'><button>Edit</button></a>
+        <br>
+        <br>
+        <form method="POST" action="/blogPosts/<%= key %>?_method=DELETE">
+        <button class="delete" type="submit">Delete</button>
+        </form>
+        <hr>
+        <br>
+    <% } %>
+
+<%- include('../partials/footer') %>

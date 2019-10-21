@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<h1>New Blog Post</h1>
+
+<form action="/tacos" method="POST">
+    <label>Blog Title</label>
+    <input type="text" name="name"><br>
+    <br>
+    <label>Body</label>
+    <input type="text" name="body"><br>
+    <br>
+    <input type="submit" value="Add Blog Post">
+</form>
+
+<%- include('../partials/footer') %>
