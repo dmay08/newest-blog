@@ -26,18 +26,21 @@ const blogModel = {
         return this.data[id]
     },
 
-    // updatePost: function(id, name, body) {
-    //     let updatedPost = {
-    //         id: this.data.id,
-    //         name: this.data.name,
-    //         body: this.data,
-    //     }
-    //     // this.data.
-    // },
+    updatePost: function(id, name, body) {
+        if (id < this.data.length && id >= 0) {
+            let updatedPost = {
+                name: name,
+                body: body
+            }
+            this.data[id] = updatedPost
+        }
+    },
 
-    // deletePost: function(id) {
-
-    // }
+    deletePost: function(id) {
+        if (id < this.data.length && id >= 0) {
+            this.data.splice(id, 1)
+        }
+    }
     
 }
 
