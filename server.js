@@ -20,7 +20,11 @@ app.use(express.static(path.join(__dirname, 'public'))); /// tells Express where
 app.use(methodOverride('_method'));
 
 // mount routes
-app.use('/', blogPostRouter)
+// app.use('/', homePageRouter)               *********** danny 10/19 *********** // need to make this router
+app.use(blogPostRouter)
+
+// Catch all route
+app.get('*', (req, res) => { res.send('404 not found!') })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
