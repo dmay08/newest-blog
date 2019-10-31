@@ -1,8 +1,8 @@
 const blogModel = {
     data: [
         {
-            name: 'Fuck Med School',
-            body: "Not worth it anymore. Too expensive, both from a social and mental health standpoint, as well as a financial standpoint."
+            name: 'Med School - No thanks',
+            body: "Medicine isn't what it once was... Advice from one of my med school professors: 'If you can picture yourself doing ANYTHING other than medicine, and be happy doing it, then medicine isn't for you.'"
         },
         {
             name: "Is Uber screwed?",
